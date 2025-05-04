@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import messierCatalog from './data/messierCatalog.json';
+
 
 // Catalogue Messier simplifié (extrait)
 const messierCatalog = [
@@ -162,14 +164,21 @@ function App() {
             </select>
           </label>
           <label>
-            Objet Messier (optionnel) :
-            <select name="messierId" value={form.messierId} onChange={handleFormChange}>
-              <option value="">Aucun</option>
-              {messierCatalog.map(obj => (
-                <option key={obj.id} value={obj.id}>{obj.name} - {obj.info}</option>
-              ))}
-            </select>
-          </label>
+  Objet Messier (optionnel) :
+  <input 
+    list="messierObjects" 
+    name="messierId" 
+    value={form.messierId} 
+    onChange={handleFormChange} 
+    placeholder="Tapez un numéro ou nom Messier"
+  />
+  <datalist id="messierObjects">
+    {messierCatalog.map(obj => (
+      <option key={obj.id} value={obj.id}>{obj.name} - {obj.info}</option>
+    ))}
+  </datalist>
+</label>
+
           <label>
             <input type="checkbox" name="keep" checked={form.keep} onChange={handleFormChange} />
             Garder cette observation
