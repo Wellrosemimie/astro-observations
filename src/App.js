@@ -4,10 +4,13 @@ import './App.css';
 // Catalogue Messier simplifié (extrait)
 const messierCatalog = [
   { id: 1, name: 'M1', type: 'Nébuleuse', info: 'Nébuleuse du Crabe', mythology: 'Supernova observée en 1054' },
-  { id: 31, name: 'M31', type: 'Galaxie', info: 'Galaxie d’Andromède', mythology: 'Voisines de la Voie Lactée' },
-  { id: 45, name: 'M45', type: 'Amas', info: 'Les Pléiades', mythology: 'Sept sœurs de la mythologie grecque' },
-  // Ajoutez d’autres objets Messier ici
+  { id: 2, name: 'M2', type: 'Amas globulaire', info: 'Amas globulaire dans le Verseau', mythology: 'Découvert par Maraldi en 1746' },
+  { id: 3, name: 'M3', type: 'Amas globulaire', info: 'Amas globulaire dans les Chiens de Chasse', mythology: 'Découvert par Charles Messier en 1764' },
+  { id: 4, name: 'M4', type: 'Amas globulaire', info: 'Amas globulaire près d’Antarès', mythology: 'Le plus proche amas globulaire' },
+  { id: 5, name: 'M5', type: 'Amas globulaire', info: 'Amas globulaire dans le Serpent', mythology: 'Découvert par Gottfried Kirch en 1702' },
+  // ... Ajoutez tous les objets jusqu'à M110
 ];
+
 
 function App() {
   // État des observations personnelles
