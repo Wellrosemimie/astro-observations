@@ -57,7 +57,8 @@ function App() {
 
   // Ajouter une observation
   function addObservation(e) {
-    e.preventDefault();
+  e.preventDefault();
+  try {
     if (!form.photo) {
       alert('Veuillez ajouter une photo.');
       return;
@@ -87,7 +88,11 @@ function App() {
       keep: true,
       watermark: false,
     });
+    alert('Observation ajoutée avec succès !'); // Confirmation visuelle
+  } catch (error) {
+    alert('Erreur : ' + error.message); // Afficher l'erreur
   }
+}
 
   // Filtrer observations par type
   const [filterType, setFilterType] = useState('Tous');
